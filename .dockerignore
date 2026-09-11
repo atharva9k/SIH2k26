@@ -1,0 +1,10 @@
+node_modules
+.git
+.pytest_cache
+__pycache__
+*.pyc
+dist
+*.log
+*.tmp
+chrome_dump.html
+test_chrome_dom.html

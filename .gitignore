@@ -1,0 +1,13 @@
+node_modules/
+.pytest_cache/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+*.log
+chrome_dump.html
+test_chrome_dom.html
+*.zip
+uploads/*
+!uploads/.gitkeep
