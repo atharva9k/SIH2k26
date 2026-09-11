@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: gem-bidverify-ai
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "cd gem-compliance-ai/frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "cd gem-compliance-ai/backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: SECRET_KEY
+        generateValue: true
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_USER
+        value: khandelwalansh29@gmail.com
+      - key: SMTP_PASSWORD
+        value: zxua xhpr onpv oozj
+      - key: EMAILS_FROM_NAME
+        value: GeM BidVerify Security System
